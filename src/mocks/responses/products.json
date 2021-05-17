@@ -1,0 +1,32 @@
+[
+  {
+    "id": "fb16ef1f-e6a5-47ab-a119-11d578462cfd",
+    "name": "Pomme",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Idared_pomme.jpg/800px-Idared_pomme.jpg"
+  },
+  {
+    "id": "0b2db7be-2bef-4cf5-93dc-183218d49305",
+    "name": "Kiwi",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Kiwi_%28Actinidia_chinensis%29_1_Luc_Viatour.jpg/1920px-Kiwi_%28Actinidia_chinensis%29_1_Luc_Viatour.jpg"
+  },
+  {
+    "id": "877ddc28-e90f-4c35-a53b-8792de83e8ae",
+    "name": "Cerise",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Cherry_sweet_cherry_red_fruit_167341.jpg/1200px-Cherry_sweet_cherry_red_fruit_167341.jpg"
+  },
+  {
+    "id": "e968169c-7818-4716-971c-f128562f27b9",
+    "name": "Fraise",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Garden_strawberry_%28Fragaria_%C3%97_ananassa%29.jpg/257px-Garden_strawberry_%28Fragaria_%C3%97_ananassa%29.jpg"
+  },
+  {
+    "id": "c912558f-0371-4060-a5c8-0c7116f52e99",
+    "name": "Banane",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Bananas_white_background_DS.jpg/220px-Bananas_white_background_DS.jpg"
+  },
+  {
+    "id": "0e6edefd-ae5f-4b73-a2e0-894a222be023",
+    "name": "Melon",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Canteloupe_and_cross_section.jpg/290px-Canteloupe_and_cross_section.jpg"
+  }
+]

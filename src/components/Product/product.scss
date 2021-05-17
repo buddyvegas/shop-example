@@ -1,0 +1,23 @@
+.product {
+  display: flex;
+  flex-basis: 45%;
+  margin: 1rem;
+  padding-left: 1rem;
+  border: 1px solid #ccc;
+
+  &__image {
+    display: inline-block;
+    width: 8em;
+    height: 8rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1rem;
+  }
+}

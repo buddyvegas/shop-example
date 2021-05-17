@@ -1,0 +1,21 @@
+.add-to-cart {
+  display: flex;
+
+  button {
+    background: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .quantity {
+    display: inline-block;
+    width: 2rem;
+    text-align: center;
+    line-height: 1.4rem;
+  }
+
+  .submit {
+    margin-left: 1rem;
+  }
+}
