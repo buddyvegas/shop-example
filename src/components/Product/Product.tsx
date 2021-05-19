@@ -33,8 +33,8 @@ const Product: FC<ProductPropsType> = ({ product }) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <CardMedia className={classes.image} image={product.image} title={product.name} />
+    <Card className={classes.root} title={product.name}>
+      <CardMedia className={classes.image} image={product.image} />
       <div className={classes.details}>
         <CardContent className={classes.content}>
           <Typography paragraph variant="h5">

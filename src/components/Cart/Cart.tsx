@@ -60,8 +60,8 @@ const Cart: FC<CartPropsType> = ({ open, onClose }) => {
 
   if (hasError) {
     return (
-      <Dialog aria-labelledby="simple-dialog-title" open={open} onClose={close}>
-        <DialogTitle id="simple-dialog-title">Une erreur est survenue. Veuillez reéessayer.</DialogTitle>
+      <Dialog aria-labelledby="cart" open={open} onClose={close}>
+        <DialogTitle id="cart">Une erreur est survenue. Veuillez reéessayer.</DialogTitle>
         <DialogActions>
           <Button onClick={retry} variant="contained" color="primary">
             Réessayer
@@ -73,15 +73,15 @@ const Cart: FC<CartPropsType> = ({ open, onClose }) => {
 
   if (isCommandComplete) {
     return (
-      <Dialog aria-labelledby="simple-dialog-title" open={open} onClose={close}>
-        <DialogTitle id="simple-dialog-title">Votre commande est terminée. Merci pour votre achat.</DialogTitle>
+      <Dialog aria-labelledby="cart" open={open} onClose={close}>
+        <DialogTitle id="cart">Votre commande est terminée. Merci pour votre achat.</DialogTitle>
       </Dialog>
     );
   }
 
   return (
-    <Dialog aria-labelledby="simple-dialog-title" open={open} onClose={close}>
-      <DialogTitle id="simple-dialog-title">Panier</DialogTitle>
+    <Dialog aria-labelledby="cart" open={open} onClose={close}>
+      <DialogTitle id="cart">Panier</DialogTitle>
       {Object.values(cart).length === 0 ? (
         <Typography paragraph className={classes.empty}>
           Le panier est vide
@@ -100,7 +100,7 @@ const Cart: FC<CartPropsType> = ({ open, onClose }) => {
                   secondary={`quantité : ${item.quantity}`}
                 />
                 <ListItemIcon>
-                  <IconButton onClick={() => removeItem(item.product.id)}>
+                  <IconButton onClick={() => removeItem(item.product.id)} aria-label="remove">
                     <DeleteIcon />
                   </IconButton>
                 </ListItemIcon>
@@ -108,7 +108,7 @@ const Cart: FC<CartPropsType> = ({ open, onClose }) => {
             ))}
           </List>
           <DialogActions>
-            <Button onClick={purchase} variant="contained" color="primary">
+            <Button onClick={purchase} variant="contained" color="primary" aria-label="purchase">
               Commander
             </Button>
           </DialogActions>

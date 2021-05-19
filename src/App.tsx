@@ -42,7 +42,7 @@ const App: FC = () => {
           <Typography variant="h6" className={classes.title}>
             Shop Example
           </Typography>
-          <IconButton aria-label="add" color="inherit" aria-controls="menu-appbar" onClick={openCart}>
+          <IconButton aria-label="open-cart" color="inherit" aria-controls="menu-appbar" onClick={openCart}>
             <Badge badgeContent={totalQuantity} color="secondary">
               <ShoppingCartIcon />
             </Badge>

@@ -23,10 +23,10 @@ const useStyles = makeStyles((theme) => ({
 const AddToCart: FC<AddToCartPropsType> = ({ product, quantity }) => {
   const classes = useStyles();
   const { addItem } = useCartActionsContext();
-  const [currentQuantity, setCurrentQuantity] = useState(quantity ?? 1);
+  const [currentQuantity, setCurrentQuantity] = useState(quantity ?? 0);
 
   const remove = () => {
-    if (currentQuantity > 1) {
+    if (currentQuantity > 0) {
       setCurrentQuantity(currentQuantity - 1);
     }
   };
@@ -38,7 +38,9 @@ const AddToCart: FC<AddToCartPropsType> = ({ product, quantity }) => {
   };
 
   const addToCart = () => {
-    addItem(product, currentQuantity);
+    if (currentQuantity > 0) {
+      addItem(product, currentQuantity);
+    }
   };
 
   return (

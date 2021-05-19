@@ -54,9 +54,6 @@ export function CartReducer(state: Record<string, ItemCartType>, action: CartAct
     case ActionsType.EMPTY_CART: {
       return {};
     }
-
-    default:
-      return state;
   }
 }
 
