@@ -9,8 +9,13 @@ export class ProductApiBuilder {
     this.product.image = 'http://fakeimage/product.jpg';
   }
 
-  withName(name: string): ProductApiBuilder {
-    this.product.name = name;
+  pomme(): ProductApiBuilder {
+    this.product.name = 'Pomme';
+    return this;
+  }
+
+  kiwi(): ProductApiBuilder {
+    this.product.name = 'Kiwi';
     return this;
   }
 

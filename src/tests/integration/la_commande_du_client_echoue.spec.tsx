@@ -10,10 +10,10 @@ import { ProductApiBuilder } from 'tests/builders/productApiBuilder';
 import { server } from 'tests/mocks/server';
 
 test('la commande du client échoue', async () => {
-  const pomme = new ProductApiBuilder().withName('Pomme').build();
-  const poire = new ProductApiBuilder().withName('Poire').build();
+  const pomme = new ProductApiBuilder().pomme().build();
+  const kiwi = new ProductApiBuilder().kiwi().build();
 
-  const catalog = [pomme, poire];
+  const catalog = [pomme, kiwi];
 
   server.use(
     rest.get(api.get.products(), (req, res, ctx) => {
@@ -28,7 +28,7 @@ test('la commande du client échoue', async () => {
   await catalogIsReady(catalog);
 
   addToCart(pomme, 2);
-  addToCart(poire, 3);
+  addToCart(kiwi, 3);
 
   openCart();
 

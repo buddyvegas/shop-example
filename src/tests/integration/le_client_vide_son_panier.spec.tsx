@@ -9,11 +9,11 @@ import openCart from 'tests/actions/openCart';
 import removeFromCart from 'tests/actions/removeFromCart';
 import catalogIsReady from 'tests/actions/catalogIsReady';
 
-test('le client vide son panier après avoir ajouté 2 pommes et 3 poires', async () => {
-  const pomme = new ProductApiBuilder().withName('Pomme').build();
-  const poire = new ProductApiBuilder().withName('Poire').build();
+test('le client vide son panier après avoir ajouté 2 pommes et 3 kiwis', async () => {
+  const pomme = new ProductApiBuilder().pomme().build();
+  const kiwi = new ProductApiBuilder().kiwi().build();
 
-  const catalog = [pomme, poire];
+  const catalog = [pomme, kiwi];
 
   server.use(
     rest.get(api.get.products(), (req, res, ctx) => {
@@ -25,12 +25,12 @@ test('le client vide son panier après avoir ajouté 2 pommes et 3 poires', asyn
   await catalogIsReady(catalog);
 
   addToCart(pomme, 2);
-  addToCart(poire, 3);
+  addToCart(kiwi, 3);
 
   openCart();
 
   removeFromCart(pomme);
-  removeFromCart(poire);
+  removeFromCart(kiwi);
 
   expect(screen.getByText('Le panier est vide')).toBeInTheDocument();
 });
