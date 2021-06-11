@@ -40,7 +40,7 @@ const App: FC = () => {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Shop Example
+            🍍 Shop Example
           </Typography>
           <IconButton aria-label="open-cart" color="inherit" aria-controls="menu-appbar" onClick={openCart}>
             <Badge badgeContent={totalQuantity} color="secondary">
